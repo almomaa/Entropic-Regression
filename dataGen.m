@@ -178,9 +178,8 @@ else
     corrCount = 0; cix = []; rix = 1:T;
 end
 
-normalized = @(q) q;
-Y(cix,:) = Y(cix,:) + CorrStd.*normalized(randn(size(Y(cix,:))));
-Y(rix,:) = Y(rix,:) + Noise.*normalized(randn(size(Y(rix,:))));
+Y(cix,:) = Y(cix,:) + CorrStd.*(randn(size(Y(cix,:))));
+Y(rix,:) = Y(rix,:) + Noise.*(randn(size(Y(rix,:))));
 
 if nargout > 2
     Info.x0         = x0;
