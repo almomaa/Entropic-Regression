@@ -89,11 +89,8 @@ p.addParameter('coupFlag',  false);
 
 
 % Alpha
-p.addParameter('alpha',   0.95, @(s) (0<=s) && (s<=1));
+p.addParameter('alpha',   0.90, @(s) (0<=s) && (s<=1));
 
-% Alpha
-p.addParameter('gamma',   0.05, @(s) (0<=s) && (s<=1));
-p.addParameter('tUB',   0.01);
 
 
 % numPerm
