@@ -93,7 +93,7 @@ for i=1:stat.dim
     
     %If not detected through entropic regression,
     %Include the constant term for influence test.
-    if ~ismember(1,optimalIX), optimalIX = cat(2,1,optimalIX); end
+%    if ~ismember(1,optimalIX), optimalIX = cat(2,1,optimalIX); end
     
     %Given the optimal basis, find least squares solution
     sol(optimalIX,i) = nls( Phi(:,optimalIX), f(:,i) );
